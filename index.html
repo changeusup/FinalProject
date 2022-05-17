@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+	<title>8비트 뮤지엄</title>
+	<style type="text/css">
+		html {font-family: 'Sunflower', sans-serif;}
+		body {margin: 0;}
+		nav {display: flex; background-color: #6D4280; padding-top: 22px; padding-bottom: 22px; padding-left: 4.86%;}
+		nav p {padding-top: 10px;}
+		nav p a {text-decoration: none; color: #FAE06F; margin-left: 75px; padding-top: 20px; font-size: 24px;}
+		nav p img { padding-right: 20px;}
+
+		.carousel {height: 350px; background-image: url(atari.gif); background-size: cover;}
+		.carousel h1 {font-size: 72px; margin-top: 0px; color: #FAE06F; text-shadow: 2px 2px orange; padding-top: 70px;}
+		.carousel div {text-align: center;}
+		.carousel div h4 { width: 200px; height: 50px; background-color: #7D83FA;}
+
+		.welcome {height: 450px; background-image: url(images/gradient.png);}
+		.welcome h1 {font-size: 144px; color: #FAE06F; margin: 0; text-align: center; text-shadow: 4px 4px orange; padding-top: 50px;}
+
+		.banner {height: 700px; text-align: center;}
+		.banner .classic {display: inline; margin: 0; float: left;}
+		.banner .classic img {display: block; height: 350px;}
+		.banner .box {display: flex;}
+		.banner .demo {background-color: #78D5FA; height: 700px; overflow: hidden; margin: auto;}
+		.banner .demo h2 {font-size: 64px; margin: 0; padding-top: 90px; text-align: center;}
+		.banner .demo p {font-size: 24px; margin: 0; padding-top: 45px; text-align: center;}
+		.banner .demo .item {margin: auto; padding-top: 65px;}
+		.banner .demo .item img {width: 160px;}
+		.banner .demo .item p {font-size: 28px; margin: 0;}
+
+		.past {display: flex; width: 100%;}
+		.past div {height: 700px; background-color: #FAE06F; width: 50%;}
+		.past img {height: 700px; float: right;}
+		.past .box {padding-left: 10%;}
+		.past .box h2 {font-size: 64px; margin: 0; padding-top: 90px; text-align: center;}
+		.past .box p {font-size: 24px; margin: 0; padding-top: 45px; text-align: center;}
+		.past .box img {width: 290px; height: auto; padding-right: 250px; padding-top: 40px;}
+
+		.events {height: 875px; background-color: #7D83FA;}
+		.events h2 {text-align: center; color: #FAE06F; font-size: 72px; margin: 0; padding-top: 100px;}
+		.events .click {text-align: center; margin: 0; padding-top: 20px; font-size: 24px; color: white;}
+		.events .posts .box {width: 420px; height: 550px; background-color: #EF7C7C; float: left; padding-left: 25px; margin-left: 4.86%; margin-top: 40px;}
+		.events .posts .box img {padding-top: 35px; width: 345px;}
+		.events .posts .box h5 {font-size: 24px; color: #FAE06F; margin: 0; padding-top: 22px;}
+		.events .posts .box h6 {font-size: 18px; color: black; margin: 0; padding-top: 14px;}
+		.events .posts .box p {font-size: 18px; color: black; margin: 0; padding-top: 24px;}
+
+		.signup {height: 600px; background-color: #FAE06F; display: flex; padding-left: 4.86%;}
+		.signup h3 {margin: 0; font-size: 36px; padding-top: 145px;}
+		.signup h4 {margin: 0; font-size: 24px; padding-top: 28px;}
+		.signup div p {margin: 0;}
+		.signup .newsletter {width: 650px; border-right: 5px solid black; padding-right: 100px; }
+		.signup .newsletter p {font-size: 24px; color: #EF7C7C; width: 310px; border-bottom: 3px solid #EF7C7C; padding-top: 83px;}
+		.signup .newsletter button {float: right; display: inline; text-decoration: none; border: none; background-color: #EF7C7C; width: 195px; height: 115px; color: #FAE06F; font-size: 64px; font-family: 'Sunflower', sans-serif; margin-top: -115px;}
+
+		.signup .check {margin-left: 15.28%; display: flex;}
+		.signup .check .item p {font-size: 28px; text-align: center; padding-top: 192px; padding-bottom: 38px;}
+
+		.footer {height: 300px; background-color: #6D4280;}
+		.footer .footerLeft {float: left;  padding-left: 4.86%;}
+		.footer div p {margin: 0; color: white; font-size: 30px; padding-top: 60px; padding-bottom: 45px; padding-right: 55px; border-bottom: 3px solid white; width: 990px;}
+		.footer div p a {padding-right: 55px; text-decoration: none; color: white;}
+		.footer .footerLeft h4 {color: white; font-size: 24px; margin: 0; padding-top: 40px;}
+		.footer .icons {float: right; margin: 0;}
+
+		.footer .footerRight {float: right; display: block; padding-right: 4.86%;}
+		.footer .footerRight .icons img {padding-top: 60px; padding-left: 25px;}
+		.footer .footerRight .icons h4 {}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<img src="logo.png">
+		<p><a href=""><img src="pixel_icons/about.png">About</a></p>
+		<p><a href=""><img src="pixel_icons/bell.png">Events</a></p>
+		<p><a href=""><img src="pixel_icons/glass.png">Discover</a></p>
+		<p><a href=""><img src="pixel_icons/store.png">Store</a></p>
+		<p><a href=""><img src="pixel_icons/contact.png">Contact</a></p>
+	</nav>
+
+	<section class="carousel">
+		<div>
+			<h1>게임 박물관<br>당신을 환영합니다!</h1>
+			
+		</div>
+	</section>
+
+	<section class="welcome">
+		<h1>GOING BACK<br>TO THE PAST!</h1>
+	</section>
+
+	<section class="banner">
+		<div class="classic">
+			<img src="images/hiscore.png">
+			<img src="images/arcade.png">
+		</div>
+		<div class="demo">
+			<h2>직접 체험하기!</h2>
+			<p>과거의 복고풍 게임을 경험하십시오</p>
+			<div class="box">
+				<div class="item">
+					<img src="pixel_icons/pong.gif">
+					<p>친구랑 같이 게임 존에서<br>역사적인 게임을<br>경험하세요</p>
+				</div>
+				<div class="item">
+					<img src="pixel_icons/apple.gif">
+					<p>놀면서 우리의 카페에서<br>맛있는 음식과 음료를<br>드셔보세요</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="past">
+		<div class="box">
+			<h2>과거로 출발!</h2>
+			<p>비디오 게임이 어떻게 시작되었는지 알아보세요.<br>우리의 전시회를 봐주세요</p>
+			<img src="pixel_icons/tv.gif">
+		</div>
+		<div><img src="images/collection.png"></div>
+	</section>
+
+	<section class="events">
+		<h2>Upcoming Events</h2>
+		<p class="click">더 많은 예정된 이벤트 보세요 >>></p>
+		<div class="posts">
+			<div class="box">
+				<img src="images/tetris.png">
+				<h5>Tetris Tournament</h5>
+				<h6>MM/DD/YYYY</h6>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit. Integer<br>egestas lacinia justo, id dignissim<br>dui tempor eget. Ut id dui quis nibh<br>sollicitudin gravida et a ex.</p>
+			</div>
+			<div class="box">
+				<img src="images/tetris.png">
+				<h5>Tetris Tournament</h5>
+				<h6>MM/DD/YYYY</h6>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit. Integer<br>egestas lacinia justo, id dignissim<br>dui tempor eget. Ut id dui quis nibh<br>sollicitudin gravida et a ex.</p>
+			</div>
+			<div class="box">
+				<img src="images/tetris.png">
+				<h5>Tetris Tournament</h5>
+				<h6>MM/DD/YYYY</h6>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit. Integer<br>egestas lacinia justo, id dignissim<br>dui tempor eget. Ut id dui quis nibh<br>sollicitudin gravida et a ex.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="signup">
+		<div class="newsletter">
+			<h3>뉴스레터에 가입하세요</h3>
+			<h4>최신 소식을 받아보세요</h4>
+			<div>
+				<p>이름</p>
+				<p>이메일</p>
+			</div>
+			<button>가입</button>
+		</div>
+		<div class="check">
+			<div class="item" style="padding-right: 92px;">
+				<p>우리 가게를<br>방문하세요</p>
+				<img src="pixel_icons/storePurple.png">
+			</div>
+			<div class="item">
+				<p>표를 미리<br>예약하세요</p>
+				<img src="pixel_icons/ticket.png">
+			</div>
+		</div>
+	</section>
+
+	<section class="footer">
+		<div class="footerLeft">
+			<div class="footMenu">
+				<p><a href="">About</a>    <a href="">Events</a>    <a href="">Discover</a>    <a href="">Store</a>    <a href="">Contact</a></p>
+			</div>
+			<h4>Copyright 2022 All Rights Reserved<br>Terms of Service</h4>
+		</div>
+		<div class="footerRight">
+			<div class="icons">
+				<img src="pixel_icons/twitter.png">
+				<img src="pixel_icons/facebook.png">
+				<img src="pixel_icons/yt.png">
+				<img src="pixel_icons/ig.png">
+			</div>
+			
+		</div>
+	</section>
+</body>
+</html>
+
+
+
+
+
+
