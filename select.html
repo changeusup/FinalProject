@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+	<title>8비트 뮤지엄 - Choose Your Generation</title>
+	<style type="text/css">
+		@font-face {
+		    font-family: 'NeoDunggeunmo';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		html {font-family: 'Sunflower', sans-serif;}
+		body {margin: 0;}
+		nav {display: flex; background-color: #6D4280; padding-top: 22px; padding-bottom: 22px; padding-left: 4.86%;}
+		nav p {padding-top: 10px;}
+		nav p a {text-decoration: none; color: #FAE06F; margin-left: 75px; padding-top: 20px; font-size: 24px;}
+		nav p img { padding-right: 20px;}
+		nav p img:hover {animation: rotation 2s infinite linear;}
+
+		@keyframes rotation {
+			from {
+				transform: rotateY(0deg);
+			}
+			to {
+				transform: rotateY(360deg);
+			}
+		}
+
+		.menu {background-color: #FAE06F; height: 620px; text-align: center;}
+		.menu h1 {font-size: 120px; margin: 0; font-family: 'NeoDunggeunmo'; padding-top: 145px;}
+		.menu h4 {font-size: 48px; margin: 0; padding-top: 40px; font-family: 'NeoDunggeunmo';}
+
+		.gen1 {background-color: #7D83FA; height: 530px; text-align: center;}
+		h5 {font-size: 36px; font-family: 'NeoDunggeunmo'; margin: 0; padding-top: 50px; padding-bottom: 50px;}
+		.gen-box {display: flex; justify-content: space-around; margin: 0;}
+		.gen-box .box img{background-color: black; border: solid 0px black;}
+		.gen-box .box p {display: block; height: 55px; font-size: 24px; background-color: #FAE06F; line-height: 55px; font-family: 'NeoDunggeunmo'; border-top: 3px solid black; margin: 0; margin-top: -4px;} 
+		.gen-box .box img:hover {border: solid 10px black; transition: 0.5s;}
+		.gen-box .box p:hover {background-color: black; color: #FAE06F; transition: 0.5s;}
+
+		a {text-decoration: none; color: black;}
+
+		.gen2 {background-color: #EF7C7C; height: 845px; text-align: center;}
+		.gen3 {background-color: #78D5FA; height: 530px; text-align: center;}
+
+		.construction {background-color: #6D4280; height: 550px; text-align: center;}
+		.construction img {padding-top: 55px;}
+		.construction {font-size: 32px; color: white; font-family: 'NeoDunggeunmo'; margin: 0;}
+
+		.footer {height: 300px; background-color: #6D4280; border-top: 3px solid white;}
+		.footer .footerLeft {float: left;  padding-left: 4.86%;}
+		.footer div p {margin: 0; color: white; font-size: 30px; padding-top: 60px; padding-bottom: 45px; padding-right: 55px; border-bottom: 3px solid white; width: 990px;}
+		.footer div p a {padding-right: 55px; text-decoration: none; color: white;}
+		.footer .footerLeft h4 {color: white; font-size: 24px; margin: 0; padding-top: 40px;}
+		.footer .icons {float: right; margin: 0;}
+
+		.footer .footerRight {float: right; display: block; padding-right: 4.86%;}
+		.footer .footerRight .icons img {padding-top: 60px; padding-left: 25px;}
+		.footer .footerRight .icons h4 {}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="index.html"><img src="logo.png"></a>
+		<p><a href="select.html"><img src="pixel_icons/about.png">About</a></p>
+		<p><a href="select.html"><img src="pixel_icons/bell.png">Events</a></p>
+		<p><a href="select.html"><img src="pixel_icons/glass.png">Discover</a></p>
+		<p><a href="select.html"><img src="pixel_icons/store.png">Store</a></p>
+		<p><a href="select.html"><img src="pixel_icons/contact.png">Contact</a></p>
+	</nav>
+
+	<section class="menu">
+		<div>
+			<h1>CHOOSE YOUR<br>GENERATION</h1>
+			<h4>당신의 세대를 선택하십시오</h4>
+		</div>
+	</section>
+
+	<section class="gen1">
+		<h5>1세대</h5>
+		<div class="gen-box">
+			<div class="box">
+				<a href=""><img src="consoles/odyssey.png">
+				<p>오디세이</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/pong.png">
+				<p>아타리 퐁</p></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="gen2">
+		<h5>2세대</h5>
+		<div class="gen-box">
+			<div class="box">
+				<a href=""><img src="consoles/channel-f.png">
+				<p>채널 F</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/atari2600.png">
+				<p>아타리 2600</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/odyssey2.png">
+				<p>오디세이 2</p></a>
+			</div>
+		</div>
+
+		<div class="gen-box" style="padding-top: 50px;">
+			<div class="box">
+				<a href=""><img src="consoles/intellivision.png">
+				<p>인텔레비젼</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/coleco.png">
+				<p>코리코비젼</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/vectrex.png">
+				<p>벡트렉스</p></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="gen3">
+		<h5>3세대</h5>
+		<div class="gen-box">
+			<div class="box">
+				<a href=""><img src="consoles/nes.png">
+				<p>NES</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/master-system.png">
+				<p>마스터 시스템</p></a>
+			</div>
+			<div class="box">
+				<a href=""><img src="consoles/atari7800.png">
+				<p>아타리 7800</p></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="construction">
+		<img src="construction.png">
+		<p>새로운 콘텐츠를 만들고 있습니다.<br>추가하는 동안 기다려주세요</p>
+	</section>
+
+	<section class="footer">
+		<div class="footerLeft">
+			<div class="footMenu">
+				<p><a href="select.html">About</a>    <a href="select.html">Events</a>    <a href="select.html">Discover</a>    <a href="select.html">Store</a>    <a href="select.html">Contact</a></p>
+			</div>
+			<h4>Copyright 2022 All Rights Reserved<br>Terms of Service</h4>
+		</div>
+		<div class="footerRight">
+			<div class="icons">
+				<img src="pixel_icons/twitter.png">
+				<img src="pixel_icons/facebook.png">
+				<img src="pixel_icons/yt.png">
+				<img src="pixel_icons/ig.png">
+			</div>
+			
+		</div>
+	</section>
+
+</body>
+</html>
