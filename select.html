@@ -35,6 +35,12 @@
 		.menu {background-color: #FAE06F; height: 620px; text-align: center;}
 		.menu h1 {font-size: 120px; margin: 0; font-family: 'NeoDunggeunmo'; padding-top: 145px;}
 		.menu h4 {font-size: 48px; margin: 0; padding-top: 40px; font-family: 'NeoDunggeunmo';}
+		.menu .text {animation: flicker 2s infinite linear;}
+		@keyframes flicker {
+			0% {text-shadow: 0px 0px;}
+			50% {text-shadow: 10px 10px red;}
+			100% {text-shadow: 0 0;}
+		}
 
 		.gen1 {background-color: #7D83FA; height: 530px; text-align: center;}
 		h5 {font-size: 36px; font-family: 'NeoDunggeunmo'; margin: 0; padding-top: 50px; padding-bottom: 50px;}
@@ -77,7 +83,7 @@
 	</nav>
 
 	<section class="menu">
-		<div>
+		<div class="text">
 			<h1>CHOOSE YOUR<br>GENERATION</h1>
 			<h4>당신의 세대를 선택하십시오</h4>
 		</div>
@@ -87,11 +93,11 @@
 		<h5>1세대</h5>
 		<div class="gen-box">
 			<div class="box">
-				<a href=""><img src="consoles/odyssey.png">
+				<a href="atari.html"><img src="consoles/odyssey.png">
 				<p>오디세이</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/pong.png">
+				<a href="atari.html"><img src="consoles/pong.png">
 				<p>아타리 퐁</p></a>
 			</div>
 		</div>
@@ -101,30 +107,30 @@
 		<h5>2세대</h5>
 		<div class="gen-box">
 			<div class="box">
-				<a href=""><img src="consoles/channel-f.png">
+				<a href="atari.html"><img src="consoles/channel-f.png">
 				<p>채널 F</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/atari2600.png">
+				<a href="atari.html"><img src="consoles/atari2600.png">
 				<p>아타리 2600</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/odyssey2.png">
+				<a href="atari.html"><img src="consoles/odyssey2.png">
 				<p>오디세이 2</p></a>
 			</div>
 		</div>
 
 		<div class="gen-box" style="padding-top: 50px;">
 			<div class="box">
-				<a href=""><img src="consoles/intellivision.png">
+				<a href="atari.html"><img src="consoles/intellivision.png">
 				<p>인텔레비젼</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/coleco.png">
+				<a href="atari.html"><img src="consoles/coleco.png">
 				<p>코리코비젼</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/vectrex.png">
+				<a href="atari.html"><img src="consoles/vectrex.png">
 				<p>벡트렉스</p></a>
 			</div>
 		</div>
@@ -134,22 +140,26 @@
 		<h5>3세대</h5>
 		<div class="gen-box">
 			<div class="box">
-				<a href=""><img src="consoles/nes.png">
+				<a href="atari.html"><img src="consoles/nes.png">
 				<p>NES</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/master-system.png">
+				<a href="atari.html"><img src="consoles/master-system.png">
 				<p>마스터 시스템</p></a>
 			</div>
 			<div class="box">
-				<a href=""><img src="consoles/atari7800.png">
+				<a href="atari.html"><img src="consoles/atari7800.png">
 				<p>아타리 7800</p></a>
 			</div>
 		</div>
 	</section>
 
 	<section class="construction">
-		<img src="construction.png">
+		<div>
+			<img src="pixel_icons/pickaxe.gif">
+			<img src="construction.png">
+			<img src="pixel_icons/pickaxe.gif">
+		</div>
 		<p>새로운 콘텐츠를 만들고 있습니다.<br>추가하는 동안 기다려주세요</p>
 	</section>
 
