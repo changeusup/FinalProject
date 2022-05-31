@@ -15,7 +15,7 @@
 		    font-style: normal;
 		}
 
-		html {font-family: 'Sunflower', sans-serif;}
+		html {font-family: 'NeoDunggeunmo', sans-serif;}
 		body {margin: 0;}
 		nav {display: flex; background-color: #6D4280; padding-top: 22px; padding-bottom: 22px; padding-left: 4.86%;}
 		nav p {padding-top: 10px;}
@@ -37,8 +37,20 @@
 		.carousel div {text-align: center;}
 		.carousel div h4 { width: 200px; height: 50px; background-color: #7D83FA;}
 
-		.welcome {height: 450px; background-image: url(images/gradient.png);}
-		.welcome h1 {font-size: 144px; color: #FAE06F; margin: 0; text-align: center; text-shadow: 4px 4px orange; padding-top: 90px; font-family: 'NeoDunggeunmo';}
+		.welcome {height: 900px; background-image: url(images/gradient.png);}
+		.welcome h1 {font-size: 144px; color: #FAE06F; margin: 0; text-align: center; text-shadow: 4px 4px orange; padding-top: 100px; font-family: 'NeoDunggeunmo';}
+		.welcome .a {animation: color-change1 2s infinite;}
+		.welcome .b {animation: color-change2 2s infinite;}
+		@keyframes color-change1 {
+			0% {color: #FAE06F;}
+			50% {color: black;}
+			100% {color: #fae06f;}
+		}
+		@keyframes color-change2 {
+			0% {color: black;}
+			50% {color: #fae06f;}
+			100% {color: black;}
+		}
 
 		.banner {height: 700px; text-align: center;}
 		.banner .classic {display: inline; margin: 0; float: left;}
@@ -59,7 +71,7 @@
 		.past .box p {font-size: 24px; margin: 0; padding-top: 45px; text-align: center;}
 		.past .box img {width: 290px; height: auto; padding-right: 250px; padding-top: 40px;}
 
-		.events {height: 875px; background-color: #7D83FA;}
+		.events {height: 875px; background-color: #7c1feb;}
 		.events h2 {text-align: center; color: #FAE06F; font-size: 72px; margin: 0; padding-top: 100px;}
 		.events .click {text-align: center; margin: 0; padding-top: 20px; font-size: 24px; color: white;}
 		.events .posts .box {width: 420px; height: 550px; background-color: #EF7C7C; float: left; padding-left: 25px; margin-left: 4.86%; margin-top: 40px;}
@@ -74,7 +86,8 @@
 		.signup div p {margin: 0;}
 		.signup .newsletter {width: 650px; border-right: 5px solid black; padding-right: 100px; }
 		.signup .newsletter p {font-size: 24px; color: #EF7C7C; width: 310px; border-bottom: 3px solid #EF7C7C; padding-top: 83px;}
-		.signup .newsletter button {float: right; display: inline; text-decoration: none; border: none; background-color: #EF7C7C; width: 195px; height: 115px; color: #FAE06F; font-size: 64px; font-family: 'Sunflower', sans-serif; margin-top: -115px;}
+		.signup .newsletter button {float: right; display: inline; text-decoration: none; border: none; background-color: #EF7C7C; width: 195px; height: 115px; color: #FAE06F; font-size: 64px; font-family: 'Sunflower', sans-serif; margin-top: -115px; transition: 0.5s;}
+		.signup .newsletter button:hover {background-color: #FAE06F; color:  #EF7C7C;}
 
 		.signup .check {margin-left: 15.28%; display: flex;}
 		.signup .check .item p {font-size: 28px; text-align: center; padding-top: 192px; padding-bottom: 38px;}
@@ -110,7 +123,8 @@
 	</section>
 
 	<section class="welcome">
-		<h1>과거로 다시<br>한번 돌아가봅시다</h1>
+		<h1 class="a">과거로 다시<br>한번 돌아가봅시다</h1>
+		<h1 class="b">과거로 다시<br>한번 돌아가봅시다</h1>
 	</section>
 
 	<section class="banner">
