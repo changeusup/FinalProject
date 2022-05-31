@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>8비트 뮤지엄 - Atari 2600</title>
+	<style type="text/css">
+		@font-face {
+		    font-family: 'NeoDunggeunmo';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		html {font-family: 'NeoDunggeunmo', sans-serif;}
+		body {margin: 0;}
+		nav {display: flex; background-color: #6D4280; padding-top: 22px; padding-bottom: 22px; padding-left: 4.86%;}
+		nav p {padding-top: 10px;}
+		nav p a {text-decoration: none; color: #FAE06F; margin-left: 75px; padding-top: 20px; font-size: 24px;}
+		nav p img { padding-right: 20px;}
+		nav p img:hover {animation: rotation 2s infinite linear;}
+
+		@keyframes rotation {
+			from {
+				transform: rotateY(0deg);
+			}
+			to {
+				transform: rotateY(360deg);
+			}
+		}
+
+		.hero {background-image: url(images/atari-render1.jpg); height: 700px; color: white; display: flex; justify-content: space-around; background-repeat: no-repeat; background-size: cover; text-align: center;}
+		.hero h2 {margin: 0; font-size: 72px; padding-top: 50px;}
+		.hero h4 {margin: 0; font-size: 30px; padding-top: 30px;}
+		.hero img {padding-top: 120px;}
+		.hero h2, h4 {animation: appear 1s linear;}
+		@keyframes appear {
+			0% {padding-top: 100px; opacity: 0;}
+			100% {padding-top: 50px; opacity: 1;}
+		}
+
+		.logo {height: 475px; background-color: #f1f1f1; text-align: center;}
+		.logo img {width: 75%;}
+		.logo img {animation: flipping 2s infinite linear;}
+		@keyframes flipping {
+			from {
+				transform: rotateX(0deg);
+			}
+			to {
+				transform: rotateX(360deg);
+			}
+		}
+
+		.info {background-color: #B72E33; height: 520px; display: flex; justify-content: space-around;}
+		.info .box {width: 530px; height: 385px; background-color: white; margin-top: 65px; box-shadow: 5px 10px;}
+		.info .box h5 {font-size: 28px; margin: 0; padding-top: 30px; padding-left: 40px; padding-bottom: 20px;}
+		.info .box h6 {font-size: 24px; margin: 0; padding-top: 20px; padding-left: 40px;}
+		.info img {margin-top: 90px;}
+
+		.gallery {height: 525px; background-color: #7c1feb;}
+		.gallery h5 {font-size: 36px; color: #FAE06F; margin: 0; padding-top: 62px; padding-left: 70px;} 
+		.gallery .photos {display: flex; justify-content: space-around; padding-top: 62px; }
+		.gallery .photos div {width: 310px; height: 310px; background-color: #D3D3D3; background-size: cover;}
+		.gallery .photos div:hover {border: 5px solid #FAE06F; transition: 0.5s;}
+
+		.famous {height: 570px; background-color: #EF7C7C; display: flex; justify-content: space-around;}
+		.famous div {padding-top: 93px;}
+		.famous .box {width: 530px; height: 400px;}
+		.famous h3 {font-size: 48px; margin: 0;}
+		.famous p {font-size: 18px; line-height: 1.5; margin: 0; padding-top: 45px;}
+
+		.ad {height: 525px; background-color: #7D83FA;}
+		.ad h5 {font-size: 36px; color: #FAE06F; margin: 0; padding-top: 62px; padding-left: 70px;} 
+		.ad .photos {display: flex; justify-content: space-around; padding-top: 62px; }
+		.ad .photos div {width: 310px; height: 310px; background-color: #D3D3D3; background-size: cover;}
+		.ad .photos div:hover {border: 5px solid #FAE06F; transition: 0.5s;}
+
+		.success {height: 700px; background-color: #B72E33; color: white; display: flex; justify-content: space-around;}
+		.success div {padding-top: 93px;}
+		.success .box {width: 530px; height: 530px;}
+		.success h3 {font-size: 48px; margin: 0;}
+		.success p {font-size: 18px; margin: 0; line-height: 1.5; padding-top: 45px;}
+		.success img {padding-top: 100px;}
+
+		.specs {height: 570px; background-color: #FAE06F; color: black; display: flex; justify-content: space-around;}
+		.specs div {padding-top: 93px;}
+		.specs .box {width: 530px; height: 405px;}
+		.specs h3 {font-size: 48px; margin: 0;}
+		.specs p {font-size: 18px; margin: 0; line-height: 1.5; padding-top: 45px;}
+
+		.games {height: 650px; background-color: #6D4280; color: #FAE06F;}
+		.games h5 {font-size: 36px; margin: 0; padding-top: 50px; padding-left: 4.86%;}
+		.games h6 {font-size: 28px; margin: 0; padding-top: 20px; padding-left: 4.86%;}
+		.games .box {display: flex; justify-content: space-around; padding-top: 40px;}
+		.games .box div {width: 310px; height: 425px; background-color: gray; background-size: cover;}
+		.games .box div:hover {border: 5px solid #FAE06F; transition: 0.5s;}
+
+
+		.footer {height: 300px; background-color: #6D4280; border-top: 3px solid white;}
+		.footer .footerLeft {float: left;  padding-left: 4.86%;}
+		.footer div p {margin: 0; color: white; font-size: 30px; padding-top: 60px; padding-bottom: 45px; padding-right: 55px; border-bottom: 3px solid white; width: 990px;}
+		.footer div p a {padding-right: 55px; text-decoration: none; color: white;}
+		.footer .footerLeft h4 {color: white; font-size: 24px; margin: 0; padding-top: 40px;}
+		.footer .icons {float: right; margin: 0;}
+
+		.footer .footerRight {float: right; display: block; padding-right: 4.86%;}
+		.footer .footerRight .icons img {padding-top: 60px; padding-left: 25px;}
+		.footer .footerRight .icons h4 {}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="index.html"><img src="logo.png"></a>
+		<p><a href="select.html"><img src="pixel_icons/about.png">About</a></p>
+		<p><a href="select.html"><img src="pixel_icons/bell.png">Events</a></p>
+		<p><a href="select.html"><img src="pixel_icons/glass.png">Discover</a></p>
+		<p><a href="select.html"><img src="pixel_icons/store.png">Store</a></p>
+		<p><a href="select.html"><img src="pixel_icons/contact.png">Contact</a></p>
+	</nav>
+
+	<section class="hero">
+		<div>
+			<h2>비디오 게임에<br>혁명을 일으킨 콘솔</h2>
+			<h4>1980대 초반에 인기 게임기, 아타리 2600</h4>
+		</div>
+		
+	</section>
+
+	<section class="logo">
+		<img src="Atari_2600_logo.svg">
+	</section>
+
+	<section class="info">
+		<div><img src="images/atari-img14.png"></div>
+		<div class="box">
+			<h5>콘솔 정보</h5>
+			<h6>회사: 아타리</h6>
+			<h6>세대: 2세대</h6>
+			<h6>출시년: 1977</h6>
+			<h6>판매량: 3000만대</h6>
+			<h6>CPU: MOS 6507 @ 1.19 MHz</h6>
+			<h6>RAM: 128바이트</h6>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<h5>갤러리</h5>
+		<div class="photos">
+			<div style="background-image: url(images/atari-render2.jpg);"></div>
+			<div style="background-image: url(images/atari-render3.jpg);"></div>
+			<div style="background-image: url(images/atari-render4.jpg);"></div>
+			<div style="background-image: url(images/atari-render5.jpg);"></div>
+		</div>
+	</section>
+
+	<section class="famous">
+		<div><img src="images/atari-img15.png"></div>
+		<div class="box">
+			<h3>왜 인기였을까?</h3>
+			<p>Atari 2600은 현대 비디오 게임 시스템의 대부였으며 수십억 달러 규모의 산업을 일으키도록 도왔습니다. Atari는 3천만 개 이상의 콘솔을 판매했으며 다른 회사와 함께 수억 개의 게임을 판매했습니다. 시스템용 카트리지는 30년에 걸쳐 생산되었으며 오늘날에도 여전히 새로운 게임이 생산되고 있습니다. 2600은 원래 시스템보다 더 나은 게임, 더 다채로운 그래픽 및 더 선명한 사운드를 제공했습니다. 가장 중요한 것은 플레이어가 새 카트리지를 삽입하여 게임을 변경할 수 있다는 것입니다. 아이들은 Combat에서 친구들과 싸웠고, Space Invaders에서 지구를 구하고, Pac-Man에서 유령보다 앞서고, Frogger와 함께 즐거운 시간을 보냈습니다.</p>
+		</div>
+	</section>
+
+	<section class="ad">
+		<h5>옛날 광고</h5>
+		<div class="photos">
+			<div style="background-image: url(images/atari-img5.jpg);"></div>
+			<div style="background-image: url(images/atari-img6.jpg);"></div>
+			<div style="background-image: url(images/atari-img7.jpg);"></div>
+			<div style="background-image: url(images/atari-img8.jpg);"></div>
+		</div>
+	</section>
+
+	<section class="success">
+		<div class="box">
+			<h3>발매와 성공</h3>
+			<p>1977년 한 해 동안 아타리는 25만대의 VCS를 판매하였으며 발매 첫 해 동안 캘리포니아 서니베일에서 제조하였는데 두꺼운 내부 RF 실드와 함께 두꺼운 프라스틱 케이스로 무게를 가중시켰다.  1978년에는 55만대 만이 판매되어 아타리의 이러한 적자는 경영자들 사이에 불화를 일으키게 되었고 아타리 창립자인 놀런 부슈널은 회사를 떠나게 된다.
+			<br><br>
+			1979년 아타리 2600은 전용 게임으로 크리스마스 선물의 베스트셀러가 되었고 100만 대가 판매되었다. 또 아타리는 당시 폭발적인 인기를 얻고 있던 타이토의 아케이드 게임 스페이스 인베이더(Space Invaders)를 1980년 1월 발매해 2백만대의 게임기를 판매하였다. 2600과 카트리지는 1980년 한 해 동안 아타리에게 20억 달러의 수익을 안겨주었으며 판매량은 매년 2배씩 증가해 1982년에는 800만 대의 2600이 판매되었다. </p>
+		</div>
+		<div><img src="images/atari-img16.png"></div>
+	</section>
+
+	<section class="specs">
+		<div><img src="images/atari-img17.png"></div>
+		<div class="box">
+			<h3>하드웨어 특징</h3>
+			<p>2600의 CPU는 MOS 6502의 저가형 버전인 MOS 6507로 1.19MHz로 동작한다. 6507은 메모리 어드레스 라인을 16개에서 13개로 줄이고 외부 인터럽트를 없애 28핀 패키지로 축소하였다. 당시 메모리는 가격이 아주 비쌌는데 6507은 최대 메모리 8KB의 메모리를 사용할 수 있었지만 4KB이상의 메모리를 사용할 것이라고는 생각하지 못했기 때문에 24핀의 카트리지 소켓에서 13비트의 어드레스 라인 중 1개를 칩 셀렉트 용도로 사용하고 나머지 12비트인 4KB만이 게임 저장용으로 사용되었다. 그러나 후기 게임에서는 이런 한계를 뱅크 스위칭으로 극복했다. 2600은 콜 스택과 게임의 상태를 포함한 런타임 데이터를 위해 128바이트의 램이 있었다</p>
+		</div>
+	</section>
+
+	<section class="games">
+		<h5>인기 게임</h5>
+		<h6>게임을 클릭해서 한번 체험해보세요</h6>
+		<div class="box">
+			<a href="http://www.virtualatari.org/soft.php?soft=Space_Invaders"><div style="background-image: url(images/atari-img9.jpg);"></div></a>
+			<a href="http://www.virtualatari.org/soft.php?soft=Yars_Revenge"><div style="background-image: url(images/atari-img10.jpg);"></div></a>
+			<a href="http://www.virtualatari.org/soft.php?soft=Pitfall"><div style="background-image: url(images/atari-img11.jpg);"></div></a>
+			<a href="http://www.virtualatari.org/soft.php?soft=River_Raid"><div style="background-image: url(images/atari-img12.jpg);"></div></a>
+		</div>
+	</section>
+
+	<section class="footer">
+		<div class="footerLeft">
+			<div class="footMenu">
+				<p><a href="select.html">About</a>    <a href="select.html">Events</a>    <a href="select.html">Discover</a>    <a href="select.html">Store</a>    <a href="select.html">Contact</a></p>
+			</div>
+			<h4>Copyright 2022 All Rights Reserved<br>Terms of Service</h4>
+		</div>
+		<div class="footerRight">
+			<div class="icons">
+				<img src="pixel_icons/twitter.png">
+				<img src="pixel_icons/facebook.png">
+				<img src="pixel_icons/yt.png">
+				<img src="pixel_icons/ig.png">
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+
+
